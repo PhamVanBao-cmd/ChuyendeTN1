@@ -10,7 +10,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\UserProfileController;
 
-// Frontend Routes
+// Frontend routes
 Route::get('/', [FrontendController::class, 'home'])->name('home');
 Route::get('/products', [FrontendController::class, 'products'])->name('frontend.products');
 Route::get('/product/{id}', [FrontendController::class, 'productDetail'])->name('frontend.product.detail');
