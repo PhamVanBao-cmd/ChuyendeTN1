@@ -1,5 +1,5 @@
 <?php
-//Trang chu
+//xây dựng giao diện trang chủ với banner, danh mục và sản phẩm nổi bật
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
