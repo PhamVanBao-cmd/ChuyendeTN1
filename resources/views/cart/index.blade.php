@@ -1,5 +1,5 @@
 @extends('layouts.user')
-
+<!-- Shopping cart UI -->
 @section('title', 'Giỏ hàng')
 
 @section('content')
