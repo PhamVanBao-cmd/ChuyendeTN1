@@ -1,5 +1,5 @@
 <?php
-
+//phát triển giao diện giỏ hàng, thanh toán và quản lý đơn hàng người dùng
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
