@@ -1,5 +1,5 @@
 # Tóm tát Cai Thiên Logic CRUD Admin
-
+##Wireframe layout draft
 ## Các thay dã thuc hien:
 
 ### 1. Chuân hóa Path cho File Uploads
