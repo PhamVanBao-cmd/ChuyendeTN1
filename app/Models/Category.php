@@ -1,7 +1,7 @@
 <?php
 
-// Xây dựng model Category cho giao diện trang chủ,
-// quản lý banner, danh mục và sản phẩm nổi bật
+// Model Category dùng để quản lý danh mục sản phẩm,
+// banner hiển thị và liên kết sản phẩm trong hệ thống nội thất
 
 namespace App\Models;
 
@@ -12,8 +12,14 @@ class Category extends Model
 {
     use HasFactory;
 
+    /**
+     * Tên bảng trong database
+     */
     protected $table = 'categories';
 
+    /**
+     * Các trường cho phép thêm dữ liệu hàng loạt
+     */
     protected $fillable = [
         'name',
         'slug',
@@ -22,12 +28,16 @@ class Category extends Model
         'is_active',
     ];
 
+    /**
+     * Ép kiểu dữ liệu cho các thuộc tính
+     */
     protected $casts = [
         'is_active' => 'boolean',
     ];
 
     /**
-     * Lấy danh sách sản phẩm thuộc danh mục
+     * Liên kết sản phẩm theo danh mục
+     * Một danh mục có nhiều sản phẩm
      */
     public function products()
     {
