@@ -13,7 +13,7 @@
 // SAU
 'image' => 'required|image|mimes:jpeg,jpg,png,gif,webp|max:2048'
 ```
-
+//ERD database design
 **Thay doi:**
 - Bõ validation `image_url`
 - Giu lai `image` required
