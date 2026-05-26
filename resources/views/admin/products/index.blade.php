@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-
+<!-- Product page layout -->
 @section('title', 'Quản lý Sản phẩm')
 
 @section('content')
