@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+// Quản lý thông tin người dùng và xác thực tài khoản hệ thống nội thất
+
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -14,7 +16,9 @@ class User extends Authenticatable
     use HasFactory, Notifiable;
 
     /**
-     * The attributes that are mass assignable.
+     * Các trường cho phép thêm dữ liệu hàng loạt
+     *
+     * Bao gồm thông tin tài khoản và phân quyền người dùng
      *
      * @var list<string>
      */
@@ -28,7 +32,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be hidden for serialization.
+     * Ẩn thông tin nhạy cảm khi trả dữ liệu ra ngoài
      *
      * @var list<string>
      */
@@ -38,15 +42,19 @@ class User extends Authenticatable
     ];
 
     /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
+     * Liên kết đơn hàng của người dùng
+     * Một người dùng có thể có nhiều đơn hàng
      */
     public function orders()
     {
         return $this->hasMany(Order::class);
     }
 
+    /**
+     * Ép kiểu dữ liệu cho các thuộc tính
+     *
+     * @return array<string, string>
+     */
     protected function casts(): array
     {
         return [
